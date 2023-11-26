@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-2 fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex justify-content-between align-items-center " href='http://localhost:3000'>
+                <img src="./Kainos_logo.jpg" style="width: 150px;" alt="site logo">
+            </a>
+            <!-- toggle button -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--end toggle button -->
+            <!-- nav tags -->
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto text-center">
+                    <div class="input-group rounded">
+                        <input type="search" name="searchall" class="form-control rounded" placeholder="Search..."
+                            aria-label="Search" aria-describedby="search-addon" style="width: 350px" />
+                        <span class="input-group-text border-0" id="search-addon">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                    <!-- <li class="nav-item px-2 py-2"><a class="nav-link text-dark fw-bold" href="/index.html">Explore</a>
+                    </li> -->
+                </ul>
+            </div>
+            <!--end nav tags -->
+
+            <!-- user login in -->
+           <% if(isAuth) { %> 
+            <div class="dropdown">
+                <div class="nav-item px-3 py-2" id="logindropdown" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="margin-right: 70px">
+                    <a class="nav-link text-dark fw-bold">
+                        Admin
+                    </a>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="left: -88px;">
+                    <li><a class="dropdown-item" href="/addEmployee">Add
+                            new employee</a></li>
+                    <li><a class="dropdown-item" href="/employees">Edit/Delete employee record</a>
+                    </li>
+                    <li><a class="dropdown-item" href="/logout">Log Out</a></li>
+                </ul>
+            </div>
+            <% } else { %>
+            <div class="nav-item px-3 py-2"><a href="/login" class="nav-link text-dark fw-bold">Login</a></div>
+            <!--login btn with dropdown -->
+            <% } %>
+    </nav>
+
+
+    <section id="info" class="py-5" style="margin-top: 100px;">
+        <div class="container">
+            <div
+                class="row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start">
+                <div class="info-content">
+                    <h2 class="mt-2 mb-4 text-dark">Welcome to Kainos Employee Management </h2>
+                    <a href="/employees" class="btn">Explore</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

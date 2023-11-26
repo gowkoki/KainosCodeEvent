@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <section class="py-5">
+        <div class="container">
+            <div class=" text-center mb-0">
+                <h2 class="position-relative d-inline-block">
+                    Add Employee Record
+                </h2>
+            </div>
+
+            <!-- form -->
+            <form action="/addEmployee"  method="POST" style=" margin-top: 35px;">
+
+                <!-- First and Last Name -->
+                <div class="row mb-4">
+                    <div class="col">
+                        <label class="form-label fw-bold">First Name</label>
+                        <input type="text" placeholder="Enter your First Name" name="firstNameField"
+                            class="col-xs-4 form-control form-control-lg" id="firstname">
+                    </div>
+                    <div class="col">
+                        <label class="form-label fw-bold">Last Name</label>
+                        <input type="text" placeholder="Enter your Last Name" name="lastNameField"
+                            class="col-xs-4 form-control form-control-lg" id="lastname">
+
+                    </div>
+                </div>
+                <!--end First and Last Name -->
+
+                <!-- Address and city -->
+                <div class="row mb-4">
+                    <div class="col">
+                        <label class="form-label fw-bold">Address</label>
+                        <input type="text" placeholder="Enter your Address" name="addressField"
+                            class="col-xs-4 form-control form-control-lg" id="address">
+                    </div>
+                    <div class="col">
+                        <label class="form-label fw-bold">City</label>
+                        <input type="text" placeholder="Enter your City" name="cityField"
+                            class="col-xs-4 form-control form-control-lg" id="city">
+
+                    </div>
+                </div>
+                <!--end Address and city -->
+
+                <!-- country and postcode -->
+                <div class="row mb-4">
+                    <div class="col">
+                        <label class="form-label fw-bold">Country</label>
+                        <input type="text" placeholder="Enter your Country" name="countryField"
+                            class="col-xs-4 form-control form-control-lg" id="country">
+                    </div>
+                    <!-- <div class="col">
+                        <label class="form-label fw-bold">Post Code</label>
+                        <input type="text" placeholder="Post Code..." name="postcodeField"
+                            class="col-xs-4 form-control form-control-lg" id="postcode">
+
+                    </div> -->
+                </div>
+                <!--end country and postcode -->
+
+                <!-- salary and role -->
+                <div class="row mb-4">
+                    <div class="col">
+                        <label class="form-label fw-bold">Salary</label>
+                        <input type="text" placeholder="Salary" name="salaryField"
+                            class="col-xs-4 form-control form-control-lg" id="salary">
+                    </div>
+                    <div class="col">
+                        <label class="form-label fw-bold">Role</label>
+                        <input type="text" placeholder="Employee Role" name="RoleField"
+                            class="col-xs-4 form-control form-control-lg" id="Role">
+                    </div>
+                </div>
+                <!--end salary and role -->
+
+                <!-- Submit button -->
+                <input type="submit" class="btn btn-primary btn-block mb-4" style="margin-left: 40%;" value="Submit">
+                <!--end Submit button -->
+            </form>
+            <!-- form end -->
+        </div>
+    </section>
+
+</body>
+
+</html>
